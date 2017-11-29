@@ -3,7 +3,7 @@ toDoTaskManager
 
 its an basic toDo application
 
-toDoApp.png Refer to Screenshot 
+Refer to Screenshot toDoApp.png  file 
 
 Steps to setup and start the applications
 -----------------------------------------
