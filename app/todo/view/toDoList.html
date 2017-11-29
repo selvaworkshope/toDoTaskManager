@@ -1,0 +1,55 @@
+<!-- Header -->
+<header id="header">
+	<nav class="left">
+		<a href="#">{{name}}</a>
+	</nav>
+	<a href="#" class="logo">ToDo Manager</a>
+</header>
+<section id="two" class="wrapper style1 special">
+	<div>
+		<div class="container">
+			<div>
+				<form name="toDoForm"  ng-controller="toDoController as toDoCtrl">
+				<div class="col-md-3">
+					<div class="input-group">
+						<span class="spanLabel">Task Title</span>
+						<input id="taskTitle" name ="taskTitle" ng-model="taskTitle" type="text" class="form-control"  placeholder="Task title" ng-required="true">
+						<input id="taskid" type="hidden"ng-model="taskid" class="form-control">
+					</div>
+					<br>
+					<div class="input-group">
+						<span class="spanLabel">Task Description</span>
+						<input id="taskDescription" type="text"  name="taskDescription" ng-model="taskDescription" class="form-control; has-error " placeholder="Task description"  ng-required="true" >
+					</div>
+					<br>
+					<div class="input-group">
+						<span class="spanLabel">Start Date</span><br>
+						<input id="taskDate"  name ="taskDate" type="text" class="datepicker" ng-model="taskDate" placeholder="DD-MM-YYYY" ng-required="true">
+					</div>
+					<br>
+					<div class="input-group">
+						<div class="input-group-btn">
+							<button id="add-new-event" type="submit" class="Addbutton" ng-click="addNewTask()">Add</button>
+							<button id="remove-event" type="button" class="Addbutton" ng-click="removeTask();">Remove</button>
+							<button id="modify-event" type="button" class="Addbutton" ng-click="modifyTask();">Modify</button> &nbsp;
+								&nbsp;<span class="fc-event-dot" style="background-color:#0073b7"></span> -Pending
+								&nbsp;<span class="fc-event-dot" style="background-color:#74f325"></span> - Completed
+						</div>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<br>
+				<div id="calendar"></div>
+			</div>
+			</form>
+		</div>
+	</div>
+	</div>
+</section>
+<!-- Footer -->
+<footer id="footer">
+	<div class="copyright">
+		<strong>Copyright &copy; 2017 <a href="#">{{emailAddress}}</a>.</strong> All rights
+		reserved.
+	</div>
+</footer>
